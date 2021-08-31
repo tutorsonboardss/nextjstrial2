@@ -32,3 +32,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# my js files
+listusersform2.js

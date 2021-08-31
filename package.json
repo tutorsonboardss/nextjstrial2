@@ -1,4 +1,6 @@
 {
+  "name": "with-tailwindcss",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,8 +14,10 @@
     "serverless-mysql": "^1.5.4"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.6",
-    "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4"
+    "autoprefixer": "^10.3.3",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.9"
   }
+
+  
 }
