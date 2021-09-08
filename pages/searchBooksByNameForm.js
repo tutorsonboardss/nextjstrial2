@@ -23,17 +23,11 @@ function App() {
       });
   };
 
-  if (bookname === "") {
-    console.log(" bookname after setbookname 1 " + bookname);
-  } else {
-    console.log(" bookname after setbookname 2" + bookname);
-  }
-
-  if (bookNameField.current === null) {
-    console.log(" bookNameField 1 " + bookNameField.current);
-  } else {
-    console.log("bookNameField 2 " + bookNameField.current);
-  }
+  // if (bookNameField.current === null) {
+  //   console.log(" bookNameField 1 " + bookNameField.current);
+  // } else {
+  //   console.log("bookNameField 2 " + bookNameField.current);
+  // }
 
   return (
     <div class="h-screen  bg-white flex   justify-center mt-12">
