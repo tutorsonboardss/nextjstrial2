@@ -104,6 +104,42 @@ const Navbar = () => {
                     <a class="flex text-lg mt-2 ">Delete Books</a>
                   </Link>
                 </a>
+
+                <div class="py-2">
+                  <hr></hr>
+                </div>
+                <a
+                  href="#"
+                  class="transition-colors duration-200 block px-4 py-0  text-normal text-gray-900 rounded hover:bg-purple-500 hover:text-white"
+                >
+                  <Link href="/listBooksNameForm">
+                    <a class="flex text-lg mt-2 ">List Books Asc</a>
+                  </Link>
+                </a>
+
+                <div class="py-2">
+                  <hr></hr>
+                </div>
+                <a
+                  href="#"
+                  class="transition-colors duration-200 block px-4 py-0  text-normal text-gray-900 rounded hover:bg-purple-500 hover:text-white"
+                >
+                  <Link href="/searchBooksByNameForm">
+                    <a class="flex text-lg mt-2 ">Search Books</a>
+                  </Link>
+                </a>
+
+                <div class="py-2">
+                  <hr></hr>
+                </div>
+                <a
+                  href="#"
+                  class="transition-colors duration-200 block px-4 py-0  text-normal text-gray-900 rounded hover:bg-purple-500 hover:text-white"
+                >
+                  <Link href="/booksListPagingForm">
+                    <a class="flex text-lg mt-2 ">List Books Pagination</a>
+                  </Link>
+                </a>
               </div>
             </div>
           </div>

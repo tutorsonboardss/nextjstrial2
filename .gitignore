@@ -36,3 +36,10 @@ yarn-error.log*
 # my js files
 listusersform2.js
 arrowtest.js
+studylistusersform2.js
+studyListBooksPage.js
+studyBooksPaging.js
+studyarrowtest.js
+/comps/StudyBooks.js
+/comps/StudyBooks.js
+/comps/StudyPagination.js
