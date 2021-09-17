@@ -1,15 +1,23 @@
 import React from "react";
 
-const Books = ({ books, loading }) => {
+const BooksVer2 = ({ books, loading }) => {
   if (loading) {
-    return <span>Loading books....</span>;
+    return (
+      <div class=" bg-white flex   justify-center mt-12">
+        <div class="bg-white w-196 shadow-xl rounded p-5">
+          <h2 class="text-center text-xl font-thin text-gray-900">
+            Loading books....
+          </h2>
+        </div>
+      </div>
+    );
   }
 
   return (
-    <div class="bg-white flex   justify-center mt-8">
+    <div class=" bg-white flex   justify-center mt-12">
       <div class="bg-white w-196 shadow-xl rounded p-5">
         <h2 class="text-center text-2xl font-extrabold text-gray-900">
-          Show Books By Page Slice
+          Show Books By Page Limit
         </h2>
         <br></br>
         <table class="border-collapse border border-green-800 ...">
@@ -93,4 +101,4 @@ const Books = ({ books, loading }) => {
   );
 };
 
-export default Books;
+export default BooksVer2;
