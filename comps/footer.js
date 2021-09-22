@@ -7,8 +7,7 @@ const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <br />
-        <br /> © Copyright 2021 TutorsOnBoard.{" "}
+        © Copyright 2021 TutorsOnBoard.{" "}
         {/* <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" /> */}
       </a>
     </footer>

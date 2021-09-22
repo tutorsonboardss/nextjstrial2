@@ -29,7 +29,7 @@ const PaginationVer2 = ({
   }
 
   return (
-    <div class="flex  justify-center mt-12 space-x-8">
+    <div class="flex justify-center mt-12 space-x-8  w-196 shadow-xl rounded p-5">
       <div class="text-red-900">
         {
           <span class="px-2 py-2 text-xs font-bold rounded-full">

@@ -40,6 +40,11 @@ studylistusersform2.js
 studyListBooksPage.js
 studyBooksPaging.js
 studyarrowtest.js
+studyNavbar.js
 /comps/StudyBooks.js
 /comps/StudyBooks.js
 /comps/StudyPagination.js
+/comps/navbar1.js
+/pages/booksroute/index.js
+/pages/booksroute/[id].js
+/pages/booksroute/
