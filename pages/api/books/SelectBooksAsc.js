@@ -7,7 +7,7 @@ const SelectBooksAsc = async (req, res) => {
       "SELECT book_id,isbn_number,book_name,author_name,publisher_name,category_name,year_published  FROM books_tbl ORDER BY book_name ASC"
     );
     console.log("function SelectBooksAsc 2");
-    return res.json(results);
+    return res.status(200).json(results);
   } catch (e) {
     res.status(500).json({ message: e.message });
   }

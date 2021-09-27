@@ -1,22 +1,28 @@
 import React, { useEffect, useState } from "react";
 function App() {
   const [books, setBooks] = useState([]);
+  let orderName = "book_name";
+  let orderType = "ASC";
 
-  const fetchBooksAsc = async () => {
-    await fetch("/api/books/SelectBooksAsc")
-      .then((res) => res.json())
-      .then((json) => setBooks(json));
-  };
-
-  const fetchBooksDesc = async () => {
-    await fetch("/api/books/SelectBooksDesc")
-      .then((res) => res.json())
-      .then((json) => setBooks(json));
+  const fetchBooksByOrderNameType = async ({ orderName, orderType }) => {
+    await fetch("/api/books/SelectBooksByOrderNameType", {
+      method: "POST",
+      body: JSON.stringify({
+        ordername: orderName,
+        ordertype: orderType,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        setBooks(json);
+      });
   };
 
   useEffect(() => {
-    //see tableview3 for more info
-    fetchBooksAsc();
+    fetchBooksByOrderNameType({ orderName, orderType });
   }, []);
 
   const [selectArrow, setSelectArrow] = useState(true);
@@ -25,9 +31,11 @@ function App() {
   const onSelectArrow = () => {
     setSelectArrow(!selectArrow);
     if (selectArrow === false) {
-      fetchBooksAsc();
+      orderType = "ASC";
+      fetchBooksByOrderNameType({ orderName, orderType });
     } else {
-      fetchBooksDesc();
+      orderType = "DESC";
+      fetchBooksByOrderNameType({ orderName, orderType });
     }
   };
 
@@ -49,8 +57,12 @@ function App() {
                   class=" font-bold  rounded-full"
                   onClick={() => onSelectArrow()}
                 >
-                  Book Name
-                  {selectArrow ? (
+                  Book Name...
+                  <img
+                    src={selectArrow ? "/up-arrow.svg" : "/down-arrow.svg"}
+                    className="h-4 ml-2 inline font-extrabold bg-gray-100 fill-current text-red-800"
+                  />
+                  {/* {selectArrow ? (
                     <img
                       src="/up-arrow.svg"
                       className="h-4 ml-2 inline font-extrabold bg-gray-100 fill-current text-red-800"
@@ -60,7 +72,7 @@ function App() {
                       src="/down-arrow.svg"
                       className="h-4 ml-2 inline font-extrabold bg-gray-100 fill-current text-blue-800"
                     />
-                  )}
+                  )} */}
                 </button>
               </th>
 

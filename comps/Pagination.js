@@ -8,7 +8,15 @@ const Pagination = ({
   loading,
 }) => {
   if (loading) {
-    return <span> Loading Pagination....</span>;
+    return (
+      <div class=" bg-white flex   justify-center mt-12">
+        <div class="bg-white w-196 shadow-xl rounded p-5">
+          <h2 class="text-center text-xl font-thin text-gray-900">
+            Loading Pages....
+          </h2>
+        </div>
+      </div>
+    );
   }
   const pageNumbers = [];
   console.log("currentPage " + currentPage);
